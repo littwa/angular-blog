@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BehaviorSubject, fromEvent, interval, Observable, of, Subject, timer } from 'rxjs';
+import { filter, debounceTime, buffer, map, bufferCount, bufferTime, timeInterval, scan, pluck, } from 'rxjs/operators';
 import { User } from '../../shared/interfaces';
 import { AuthService } from '../shared/services/auth.service';
 
@@ -13,11 +15,18 @@ export class LoginPageComponent implements OnInit {
 
   form: FormGroup
   submitted: boolean = false
+  message: string = ""
 
-  constructor(public auth: AuthService, private router: Router) {
-  }
+  constructor(public auth: AuthService, private router: Router, public route: ActivatedRoute) { }
+
 
   ngOnInit() {
+
+    this.route.queryParams.subscribe((params) => {
+      if (params.loginAgain) { this.message = "Input credential" }
+      if (params.authFailed) { this.message = "Expiration session" }
+    })
+
     this.form = new FormGroup({
       email: new FormControl(null, [
         Validators.required,
@@ -48,4 +57,6 @@ export class LoginPageComponent implements OnInit {
     }, () => this.submitted = false)
 
   }
+
+
 }
