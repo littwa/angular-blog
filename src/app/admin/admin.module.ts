@@ -7,9 +7,11 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './shared/services/auth.guard';
 import { SharedModule } from '../shared/shared.module';
+import { SearchPipe } from './shared/search.pipe';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import { AlertService } from './shared/services/alert.service';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { SharedModule } from '../shared/shared.module';
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    SearchPipe,
+    AlertComponent
   ],
   imports: [
     CommonModule,
@@ -32,12 +36,12 @@ import { SharedModule } from '../shared/shared.module';
           { path: 'login', component: LoginPageComponent },
           { path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard] },
           { path: 'create', component: CreatePageComponent, canActivate: [AuthGuard] },
-          { path: 'posts/:id/edit', component: EditPageComponent, canActivate: [AuthGuard] }
+          { path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard] }
         ]
       }
     ])
   ],
   exports: [RouterModule],
-  providers: [AuthGuard] // AuthService,
+  providers: [AuthGuard, AlertService]
 })
 export class AdminModule { }
