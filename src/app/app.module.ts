@@ -12,6 +12,11 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth.intreceptor';
 import { registerLocaleData } from '@angular/common';
 import ruLocale from '@angular/common/locales/ru'
+import { StoreModule } from '@ngrx/store';
+import { reducers } from "./core/index";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { MainEffects } from './core/main/main.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 registerLocaleData(ruLocale, "ru")
 
@@ -32,7 +37,10 @@ const INTERCEPTOR_PROVIDER = {
   imports: [
     SharedModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EffectsModule.forRoot([MainEffects]),
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent]

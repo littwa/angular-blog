@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from '../shared/interfaces';
 import { PostsService } from '../shared/posts.service';
+import { Store } from '@ngrx/store'
+import { AddMainAction, DelMainAction } from '../core/main/main.actions'
+import { getAmount } from '../core/index'
 
 @Component({
   selector: 'app-home-page',
@@ -11,11 +14,21 @@ import { PostsService } from '../shared/posts.service';
 export class HomePageComponent implements OnInit {
 
   public posts$: Observable<Post[]>
+  public ngrxx$: Observable<any>
 
-  constructor(private postService: PostsService) { }
+  constructor(private postService: PostsService, private store: Store) { }
 
   ngOnInit(): void {
     this.posts$ = this.postService.getAll()
+
+    this.ngrxx$ = this.store.select(getAmount)
   }
 
+  handleClick() {
+    this.store.dispatch(new AddMainAction(1))
+  }
+
+  handleClickDel() {
+    this.store.dispatch(new DelMainAction(1))
+  }
 }

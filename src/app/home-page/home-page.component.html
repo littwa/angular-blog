@@ -2,3 +2,10 @@
   <app-post *ngFor="let post of posts" [post]="post"></app-post>
 </div>
 <ng-template #loading><p class="text-center">Loading...</p></ng-template>
+<!-- test ngrx -->
+<div (click)="handleClick()">ADD</div>
+<div (click)="handleClickDel()">DEL</div>
+<p *ngIf="ngrxx$ | ngrxPush as x "> ngrxPush - {{ x }}</p>
+<p *ngIf="ngrxx$ | async as a "> async - {{ a }}</p>
+<p *ngrxLet="ngrxx$; let n; let e = $error, let c = $complete">ngrxLet - {{n}}-{{e}}-{{c}}</p>
+<!-- test ngrx -->
