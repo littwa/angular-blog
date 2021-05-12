@@ -17,6 +17,10 @@ import { reducers } from "./core/index";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MainEffects } from './core/main/main.effects';
 import { EffectsModule } from '@ngrx/effects';
+import { CatRouteComponent } from './shared/components/cat-route/cat-route.component';
+import { DogRouteComponent } from './shared/components/dog-route/dog-route.component';
+
+
 
 registerLocaleData(ruLocale, "ru")
 
@@ -32,7 +36,9 @@ const INTERCEPTOR_PROVIDER = {
     MainLayoutComponent,
     HomePageComponent,
     PostPageComponent,
-    PostComponent
+    PostComponent,
+    DogRouteComponent,
+    CatRouteComponent
   ],
   imports: [
     SharedModule,

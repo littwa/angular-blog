@@ -7,6 +7,9 @@ import { ReactiveComponentModule } from '@ngrx/component';
 
 @NgModule({
   imports: [ReactiveComponentModule, HttpClientModule, QuillModule.forRoot()],
-  exports: [ReactiveComponentModule, HttpClientModule, QuillModule]
+  exports: [ReactiveComponentModule, HttpClientModule, QuillModule],
+  declarations: [
+
+  ]
 })
 export class SharedModule { }
