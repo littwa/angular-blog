@@ -1,1 +1,68 @@
 <p *ngIf="cat$ | async as c">cat-route works! {{ c }}</p>
+<div [ngStyle]="{color: 'red', cursor: 'pointer' }" (click)="handleClickDiv($event)">Click</div>
+
+<mat-slider thumbLabel
+[displayWith]="formatLabel"
+tickInterval="1000"
+step="5"
+min="0"
+max="100"
+aria-label="units" value="50"></mat-slider>
+
+<!-- <circle-progress
+  [percent]="85"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="300"
+></circle-progress> -->
+<!-- <circle-progress [percent]="15" [outerStrokeColor]="'#911'"[innerStrokeColor]="'#341'"></circle-progress>
+<circle-progress [percent]="25" [outerStrokeColor]="'#577'"[innerStrokeColor]="'#341'"></circle-progress>
+<circle-progress [percent]="75" [outerStrokeColor]="'#188'"[innerStrokeColor]="'#341'"></circle-progress> -->
+
+<form [formGroup]="form" (ngSubmit)="subForm()">
+  <input placeholder="line" formControlName="line">
+  <input placeholder="busy" fromControlName="busy">
+  <input placeholder="customize" formControlName="customize">
+  <div formArrayName="phones">
+    <div *ngFor="let phone of form.controls.phones['controls']; let i = index">
+      <label>phone-{{i+1}}</label>
+      <input formControlName="{{i}}">
+    </div>
+    <button type="button" (click)="addPhone()">add phone</button>
+  </div>
+  <select [ngStyle]="{width: 'auto', height: 'auto' }" formControlName="selec">
+    <option disabled>choose</option>
+    <option>question</option>
+    <option>wise</option>
+    <option>supplies</option>
+  </select>
+  <label>check1<input type="checkbox" formControlName="check1"></label>
+  <label>check2<input type="checkbox" formControlName="check2"></label>
+  <label>check3<input type="checkbox" formControlName="check3"></label>
+  <label for="check4" >check4</label><input type="checkbox" formControlName="check4" id="check4">
+
+  <div formGroupName="radio">
+  <input id="1" type="radio" value="r1" formControlName="radioIn">
+  <label for="1">R-1</label>
+  <input id="2" type="radio" value="r2" formControlName="radioIn">
+  <label for="2">R-2</label>
+  <input id="3" type="radio" value="r3" formControlName="radioIn">
+  <label for="3">R-3</label>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div>{{catService.amount}}</div>
+<button (click)="catService.increment()">&nbsp;&nbsp; + &nbsp;&nbsp;</button>
+<button (click)="catService.decrement()">&nbsp;&nbsp; - &nbsp;&nbsp;</button>
+
+<p>{{main}}</p>
+
+<app-simple [(user)]="main"></app-simple>
+
+<!-- (outp)="outp($event)" -->

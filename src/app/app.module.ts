@@ -17,10 +17,13 @@ import { reducers } from "./core/index";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MainEffects } from './core/main/main.effects';
 import { EffectsModule } from '@ngrx/effects';
-import { CatRouteComponent } from './shared/components/cat-route/cat-route.component';
+import { C, CatRouteComponent } from './shared/components/cat-route/cat-route.component';
 import { DogRouteComponent } from './shared/components/dog-route/dog-route.component';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgCircleProgressModule, CircleProgressOptions } from 'ng-circle-progress';
+import { SimpleComponent } from './shared/components/simple/simple.component';
 
 registerLocaleData(ruLocale, "ru")
 
@@ -38,7 +41,9 @@ const INTERCEPTOR_PROVIDER = {
     PostPageComponent,
     PostComponent,
     DogRouteComponent,
-    CatRouteComponent
+    CatRouteComponent,
+    C,
+    SimpleComponent,
   ],
   imports: [
     SharedModule,
@@ -47,8 +52,23 @@ const INTERCEPTOR_PROVIDER = {
     EffectsModule.forRoot([MainEffects]),
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatDialogModule,
+    NgCircleProgressModule,
   ],
-  providers: [INTERCEPTOR_PROVIDER],
+  providers: [INTERCEPTOR_PROVIDER, CircleProgressOptions],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// NgCircleProgressModule.forRoot({
+//   radius: 50,
+//   outerStrokeWidth: 10,
+//   innerStrokeWidth: 4,
+//   outerStrokeColor: "#911",
+//   innerStrokeColor: "#564",
+//   animationDuration: 500,
+// })
+
