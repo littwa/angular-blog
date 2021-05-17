@@ -11,7 +11,8 @@ const routes: Routes = [
     path: '', component: MainLayoutComponent, children: [
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '', component: HomePageComponent, children: [{ path: 'dog', component: DogRouteComponent }, { path: 'cat', component: CatRouteComponent }] },
-      { path: 'post/:id', component: PostPageComponent }
+      { path: 'post/:id', component: PostPageComponent },
+      { path: 'material', loadChildren: () => import('./table/table.module').then(m => m.TableModule) }
     ]
   },
   {

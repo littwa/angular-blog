@@ -8,7 +8,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SimpleComponent {
 
-
   userName2
 
   @Input()

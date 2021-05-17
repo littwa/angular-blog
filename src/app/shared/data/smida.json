@@ -1,0 +1,156 @@
+[
+  {
+    "idReport": 20,
+    "idSubject": 21,
+    "reportState": "Помилка валідації на боці інформагента",
+    "termType": "Щоденні",
+    "publicationType": "Подання інформації",
+    "reportGroup": "Депозитарні установи",
+    "outputNumber": "КС-10367",
+    "outputDate": {
+      "date": "2020-12-02 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": true,
+    "bDisclosure": true,
+    "dateFill": {
+      "date": "2020-12-02 16:45:15.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "txt"
+  },
+  {
+    "idReport": 11,
+    "idSubject": 21,
+    "reportState": "Помилка валідації на боці інформагента",
+    "termType": "Щоденні",
+    "publicationType": "Подання інформації",
+    "reportGroup": "Депозитарні установи",
+    "outputNumber": "КС-10367",
+    "outputDate": {
+      "date": "2020-12-25 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-20 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  },
+  {
+    "idReport": 21,
+    "idSubject": 21,
+    "reportState": "Успішно подано до НКЦПФР",
+    "termType": "Особлива та інша нерегулярна інформація",
+    "publicationType": "Подання інформації",
+    "reportGroup": "Емітенти цінних паперів",
+    "outputNumber": "БН-18013",
+    "outputDate": {
+      "date": "2020-12-04 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-24 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  },
+  {
+    "idReport": 22,
+    "idSubject": 21,
+    "reportState": "Інформація про програмні продукти",
+    "termType": "Інформація про програмні продукти",
+    "publicationType": "Подання інформації",
+    "reportGroup": "Професійний учасник",
+    "outputNumber": "HH-00001",
+    "outputDate": {
+      "date": "2020-12-10 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-29 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  },
+  {
+    "idReport": 23,
+    "idSubject": 23,
+    "reportState": "Інформація про програмні продукти",
+    "termType": "Інформація про програмні продукти",
+    "publicationType": "Подання інформації_23",
+    "reportGroup": "Професійний учасник",
+    "outputNumber": "HH-00001",
+    "outputDate": {
+      "date": "2020-12-04 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-19 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  },
+  {
+    "idReport": 24,
+    "idSubject": 24,
+    "reportState": "Інформація про програмні продукти",
+    "termType": "Інформація про програмні продукти",
+    "publicationType": "Подання інформації_24",
+    "reportGroup": "Професійний учасник",
+    "outputNumber": "HH-00001",
+    "outputDate": {
+      "date": "2020-12-31 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-01 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  },
+  {
+    "idReport": 27,
+    "idSubject": 27,
+    "reportState": "Інформація про програмні продукти",
+    "termType": "Інформація про програмні продукти",
+    "publicationType": "Подання інформації_27+",
+    "reportGroup": "Професійний учасник",
+    "outputNumber": "HH-00027",
+    "outputDate": {
+      "date": "2020-12-31 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "bSentToNSSMC": false,
+    "bDisclosure": false,
+    "dateFill": {
+      "date": "2020-11-03 14:43:34.000000",
+      "timezone_type": 3,
+      "timezone": "Europe/Kiev"
+    },
+    "reportFormat": "xml"
+  }
+]
