@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
   imports: [
     SharedModule,
     MatNativeDateModule,
-    MatRippleModule,
     MatDatepickerModule,
     MatButtonModule,
     MatSelectModule,
