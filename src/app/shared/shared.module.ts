@@ -8,9 +8,11 @@ import { CommonModule } from "@angular/common";
 
 
 
+
 @NgModule({
   imports: [FormsModule, CommonModule, ReactiveFormsModule, ReactiveComponentModule, HttpClientModule, QuillModule.forRoot()],
+  declarations: [],
   exports: [FormsModule, CommonModule, ReactiveFormsModule, ReactiveComponentModule, HttpClientModule, QuillModule],
-  declarations: []
+
 })
 export class SharedModule { }

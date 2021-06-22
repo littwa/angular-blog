@@ -10,10 +10,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DiaryComponent } from './diary/diary.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    TablePageComponent
+    TablePageComponent,
+    DiaryComponent
   ],
   imports: [
     SharedModule,
@@ -25,11 +28,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
+    MatIconModule,
     RouterModule.forChild([
       { path: '', component: TablePageComponent }
     ]),
 
   ],
-  // exports: [RouterModule]
+  // exports: [DiaryComponent]
 })
 export class TableModule { }

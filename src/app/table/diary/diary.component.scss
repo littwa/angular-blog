@@ -1,0 +1,25 @@
+::ng-deep {
+  .diary .mat-form-field-type-mat-input {
+   width: 100%;
+  }
+}
+
+.diary {
+  width: 40%;
+}
+
+.diary .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.diary .btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
