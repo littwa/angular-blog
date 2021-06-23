@@ -12,13 +12,18 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DiaryComponent } from './diary/diary.component';
 import { MatIconModule } from '@angular/material/icon';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { PostComponent } from './post/post.component';
+
 
 @NgModule({
   declarations: [
     TablePageComponent,
-    DiaryComponent
+    DiaryComponent,
+    PostComponent
   ],
   imports: [
+    PickerModule,
     SharedModule,
     MatNativeDateModule,
     MatDatepickerModule,
@@ -32,8 +37,7 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule.forChild([
       { path: '', component: TablePageComponent }
     ]),
-
   ],
-  // exports: [DiaryComponent]
+  exports: [PickerModule]
 })
 export class TableModule { }

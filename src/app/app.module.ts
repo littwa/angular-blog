@@ -27,6 +27,10 @@ import { MatTableModule } from '@angular/material/table';
 
 import { NgCircleProgressModule, CircleProgressOptions } from 'ng-circle-progress';
 import { SimpleComponent } from './shared/components/simple/simple.component';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { DiaryComponent } from './table/diary/diary.component';
+import { TableModule } from './table/table.module';
+
 
 registerLocaleData(ruLocale, "ru")
 
@@ -47,6 +51,7 @@ const INTERCEPTOR_PROVIDER = {
     CatRouteComponent,
     C,
     SimpleComponent,
+
   ],
   imports: [
     SharedModule,
@@ -60,6 +65,8 @@ const INTERCEPTOR_PROVIDER = {
     MatDialogModule,
     MatTableModule,
     NgCircleProgressModule,
+    PickerModule,
+    TableModule
   ],
   providers: [INTERCEPTOR_PROVIDER, CircleProgressOptions],
   bootstrap: [AppComponent]

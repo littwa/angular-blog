@@ -1,3 +1,7 @@
-<div>Task 1
-  <app-diary></app-diary>
+<div>
+  <app-diary (onAddPostChange)="addPostChange($event)"></app-diary>
+  <div class="container">
+    <app-post *ngFor="let postCont of posts" [content]="postCont"></app-post>
+  </div>
+  <!-- <app-post [content]=""></app-post> -->
 </div>

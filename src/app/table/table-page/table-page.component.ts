@@ -14,6 +14,13 @@ export class TablePageComponent implements OnInit {
 
   constructor() { }
 
+  posts: string[] = []
+
   ngOnInit(): void { }
+
+  addPostChange(post) {
+    console.log("post", post)
+    this.posts.push(post)
+  }
 
 }
