@@ -15,7 +15,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { PostComponent } from './post/post.component';
 
-
 @NgModule({
   declarations: [
     TablePageComponent,

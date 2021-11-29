@@ -1,37 +1,29 @@
 import { EventEmitter } from '@angular/core';
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
 
-import { EmojiSearch } from '@ctrl/ngx-emoji-mart';
-import { EmojiEvent } from '@ctrl/ngx-emoji-mart/ngx-emoji';
-
-
-
 @Component({
   selector: 'app-diary',
   templateUrl: './diary.component.html',
   styleUrls: ['./diary.component.scss']
 })
 export class DiaryComponent implements OnInit {
-  isVisible: boolean = true
+  public isVisible: boolean = true
   public value: string = '';
-  constructor() { }
-  @ViewChild('textarea', { static: false }) textarea;
 
-  @Output() onAddPostChange = new EventEmitter<any>();
+  constructor() { }
+
+  @ViewChild('textarea', { static: false }) textarea;
+  @Output() onAddPostChange: EventEmitter<string> = new EventEmitter<string>();
 
   ngOnInit(): void { }
 
-  addEmoji(e) {
-    console.log(e)
-    console.log(e.emoji)
-
+  addEmoji(e): void {
     this.value = this.value + e.emoji.native
-
   }
 
-  addPostHandle() {
+  addPostHandle(): void {
     this.onAddPostChange.emit(this.value);
-    this.value = "";
+    this.value = '';
   }
 
 }

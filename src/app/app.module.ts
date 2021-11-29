@@ -32,12 +32,12 @@ import { DiaryComponent } from './table/diary/diary.component';
 import { TableModule } from './table/table.module';
 
 
-registerLocaleData(ruLocale, "ru")
+registerLocaleData(ruLocale, "ru");
 
 const INTERCEPTOR_PROVIDER = {
   provide: HTTP_INTERCEPTORS,
   multi: true,
-  useClass: AuthInterceptor
+  useClass: AuthInterceptor,
 }
 
 @NgModule({

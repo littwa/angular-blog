@@ -4,11 +4,6 @@ import { QuillModule } from "ngx-quill";
 import { ReactiveComponentModule } from '@ngrx/component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { PickerModule } from '@ctrl/ngx-emoji-mart';
-
-
-
-
 
 @NgModule({
   imports: [FormsModule, CommonModule, ReactiveFormsModule, ReactiveComponentModule, HttpClientModule, QuillModule.forRoot()],

@@ -1,21 +1,31 @@
 <div class="diary">
-  <div class="title"><p>Your diary</p><mat-icon>arrow_forward</mat-icon></div>
+  <div class="title">
+    <p>Your diary</p>
+    <mat-icon>arrow_forward</mat-icon>
+  </div>
   <mat-form-field appearance="outline">
-    <!-- <mat-label>Textarea</mat-label> -->
-    <textarea #textarea
-    [(ngModel)]="value" placeholder="Write something" matInput></textarea>
+    <textarea matInput
+              #textarea
+              [(ngModel)]="value"
+              placeholder="Write something">
+    </textarea>
   </mat-form-field>
   <div *ngIf="!isVisible" class="emoji">
-    <emoji-mart [enableSearch]="false" [showPreview]="false" (emojiClick)="addEmoji($event)"></emoji-mart>
+    <emoji-mart [enableSearch]="false"
+                [showPreview]="false"
+                (emojiClick)="addEmoji($event)">
+    </emoji-mart>
   </div>
   <div class="btn-container">
     <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
-      <mat-icon *ngIf="isVisible" (click)="isVisible = !isVisible">sentiment_very_satisfied</mat-icon>
-      <mat-icon *ngIf="!isVisible" (click)="isVisible = !isVisible">keyboard</mat-icon>
+      <mat-icon *ngIf="isVisible"
+                (click)="isVisible = !isVisible">sentiment_very_satisfied
+      </mat-icon>
+      <mat-icon *ngIf="!isVisible"
+                (click)="isVisible = !isVisible">keyboard
+      </mat-icon>
     </button>
-    <button (click)="addPostHandle()" mat-flat-button color="primary">Save</button>
+    <button (click)="addPostHandle()"
+            mat-flat-button color="primary">Save</button>
   </div>
 </div>
-
-<!-- [enableFrequentEmojiSort]="false" -->
-<!-- showSingleCategory -->

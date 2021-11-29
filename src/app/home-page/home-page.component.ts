@@ -13,13 +13,13 @@ import { getAmount } from '../core/index'
 })
 export class HomePageComponent implements OnInit {
 
-  public posts$: Observable<Post[]>
-  public ngrxx$: Observable<any>
+  public posts$: Observable<Post[]>;
+  public ngrxx$: Observable<any>;
 
   constructor(private postService: PostsService, private store: Store) { }
 
   ngOnInit(): void {
-    this.posts$ = this.postService.getAll()
+    this.posts$ = this.postService.getAll();
 
     this.ngrxx$ = this.store.select(getAmount)
   }

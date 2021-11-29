@@ -20,7 +20,7 @@ const routes: Routes = [
   }
 ];
 
-const config = { preloadingStrategy: PreloadAllModules }
+const config = { preloadingStrategy: PreloadAllModules };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, config)],

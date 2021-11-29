@@ -1,9 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-import { filter } from 'rxjs/operators';
-import smida from '../../shared/data/smida.json'
 
 @Component({
   selector: 'app-table-page',
@@ -14,12 +9,11 @@ export class TablePageComponent implements OnInit {
 
   constructor() { }
 
-  posts: string[] = []
+  public posts: string[] = []
 
   ngOnInit(): void { }
 
-  addPostChange(post) {
-    console.log("post", post)
+  addPostChange(post: string): void {
     this.posts.push(post)
   }
 
