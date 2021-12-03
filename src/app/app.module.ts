@@ -30,9 +30,12 @@ import { SimpleComponent } from './shared/components/simple/simple.component';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { DiaryComponent } from './table/diary/diary.component';
 import { TableModule } from './table/table.module';
+import { ModARoutingModule } from 'src/app/modules/mod-a/mod-a-routing.module';
+import { ModAModule } from 'src/app/modules/mod-a/mod-a.module';
+import { CityComponent } from 'src/app/modules/mod-a/city/city.component';
 
 
-registerLocaleData(ruLocale, "ru");
+registerLocaleData(ruLocale, 'ru');
 
 const INTERCEPTOR_PROVIDER = {
   provide: HTTP_INTERCEPTORS,
@@ -51,7 +54,6 @@ const INTERCEPTOR_PROVIDER = {
     CatRouteComponent,
     C,
     SimpleComponent,
-
   ],
   imports: [
     SharedModule,
@@ -66,7 +68,8 @@ const INTERCEPTOR_PROVIDER = {
     MatTableModule,
     NgCircleProgressModule,
     PickerModule,
-    TableModule
+    TableModule,
+    ModAModule
   ],
   providers: [INTERCEPTOR_PROVIDER, CircleProgressOptions],
   bootstrap: [AppComponent]
