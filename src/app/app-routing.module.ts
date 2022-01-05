@@ -18,6 +18,9 @@ const routes: Routes = [
   {
     path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
+  {
+    path: 'city', loadChildren: () => import('./modules/mod-a/mod-a.module').then(m => m.ModAModule)
+  },
   { path: '**', component: CatRouteComponent }
 ];
 
