@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-opel',
-  templateUrl: './opel.component.html',
-  styleUrls: ['./opel.component.scss']
+  selector: 'app-car',
+  templateUrl: './car.component.html',
+  styleUrls: ['./car.component.scss']
 })
-export class OpelComponent implements OnInit {
+export class CarComponent implements OnInit {
 
   readonly hero$ = this.route.data.pipe(
     map((data: any) => data)
@@ -17,7 +17,6 @@ export class OpelComponent implements OnInit {
     private route: ActivatedRoute,
   ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

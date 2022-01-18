@@ -32,10 +32,13 @@ const routes: Routes = [
     path: 'city', loadChildren: () => import('./modules/mod-a/mod-a.module').then(m => m.ModAModule)
   },
   {
-    path: 'opel', loadChildren: () => import('./modules/mod-b/mod-b.module').then(m => m.ModBModule),
+    path: 'car', loadChildren: () => import('./modules/mod-b/mod-b.module').then(m => m.ModBModule),
     resolve: {
       superResolver: SuperResolver
     }
+  },
+  {
+    path: 'chart', loadChildren: () => import('./modules/mod-c/mod-c.module').then(m => m.ModCModule)
   },
   {
     path: '**', component: CatRouteComponent

@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OpelComponent } from 'src/app/modules/mod-b/opel/opel.component';
+import { CarComponent } from 'src/app/modules/mod-b/car/car.component';
+import { KiaComponent } from 'src/app/modules/mod-b/kia/kia.component';
 
 const routes: Routes = [
-  { path: '', component: OpelComponent }
+  { path: '', component: CarComponent,
+    children: [
+      { path: '', component: KiaComponent }
+    ]
+  }
 ];
 
 @NgModule({
