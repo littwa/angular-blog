@@ -1,0 +1,6 @@
+<p>skoda works!</p>
+
+<ng-container *ngTemplateOutlet="tmpl; context: { $implicit: 2, local: 5 }"></ng-container>
+<ng-template #tmpl let-data1 let-data2='local'><p>ngTemplateOutlet - {{ data1 }} - {{ data2 }}</p></ng-template>
+
+<ng-container *ngComponentOutlet="BmvComponent; content: myContent"></ng-container>

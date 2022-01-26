@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatService } from 'src/app/shared/services/cat.service';
 
 @Component({
   selector: 'app-bmv',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BmvComponent implements OnInit {
   value: any = null;
-  constructor() {}
+  num = this.catService.amount;
 
-  ngOnInit(): void {
+  constructor(private catService: CatService) {}
+
+  ngOnInit(): void {}
+
+  inc(): void {
+    this.catService.increment();
+  }
+
+  getNum(): number {
+    return this.catService.amount;
   }
 
 }

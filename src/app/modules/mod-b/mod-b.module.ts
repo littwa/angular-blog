@@ -4,19 +4,21 @@ import { ModBRoutingModule } from 'src/app/modules/mod-b/mod-b-routing.module';
 import { CarComponent } from 'src/app/modules/mod-b/car/car.component';
 import { KiaComponent } from './kia/kia.component';
 import { BmvComponent } from './bmv/bmv.component';
-
+import { SkodaComponent } from './skoda/skoda.component';
+import { AdDirective } from 'src/app/directives/ad.directive';
 
 
 @NgModule({
   declarations: [
     CarComponent,
     KiaComponent,
-    BmvComponent
+    BmvComponent,
+    SkodaComponent,
+    AdDirective
   ],
   imports: [
     CommonModule,
-    ModBRoutingModule
+    ModBRoutingModule,
   ],
-  // entryComponents: [BmvComponent]
 })
 export class ModBModule { }

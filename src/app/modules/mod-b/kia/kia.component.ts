@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, TemplateRef, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
 import { BmvComponent } from 'src/app/modules/mod-b/bmv/bmv.component';
 
 @Component({
@@ -8,24 +8,25 @@ import { BmvComponent } from 'src/app/modules/mod-b/bmv/bmv.component';
 })
 export class KiaComponent {
 
-  @ViewChild('book') book!: any;
+  @ViewChild('view', { read: ViewContainerRef }) view: ViewContainerRef;
 
-  constructor(
-    private componentFactoryResolver: ComponentFactoryResolver
-  ) {}
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
+
+  clearBook(): void {
+    this.view.clear();
+  }
 
   addBook(): void {
-    this.book.viewContainerRef.clear();
+    this.view.clear();
 
-    const bookItemComponent = this.componentFactoryResolver.resolveComponentFactory(
-      BmvComponent
-    );
-    const bookItemComponentRef: any = this.book.viewContainerRef.createComponent(
-        bookItemComponent
-      )
-    ;
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(BmvComponent);
+    const componentRef = this.view.createComponent(componentFactory);
 
-    bookItemComponentRef.instance.value = {
+    console.log(10000008, this.view);
+    console.log(10000009, componentRef);
+    console.log(100000010, componentFactory);
+
+    componentRef.instance.value = {
       title: 'Great Expectations',
       author: 'Charles Dickens',
     };

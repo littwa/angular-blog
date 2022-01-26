@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import ruLocale from '@angular/common/locales/ru'
+import ruLocale from '@angular/common/locales/ru';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -16,7 +16,7 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './shared/auth.intreceptor';
-import { reducers } from "./core/index";
+import { reducers } from './core/index';
 import { MainEffects } from './core/main/main.effects';
 import { C, CatRouteComponent } from './shared/components/cat-route/cat-route.component';
 import { DogRouteComponent } from './shared/components/dog-route/dog-route.component';
@@ -41,7 +41,7 @@ const INTERCEPTOR_PROVIDER = {
   provide: HTTP_INTERCEPTORS,
   multi: true,
   useClass: AuthInterceptor,
-}
+};
 
 @NgModule({
   declarations: [
