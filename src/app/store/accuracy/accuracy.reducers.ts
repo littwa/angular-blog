@@ -1,6 +1,16 @@
 import * as accuracyActions from './accuracy.actions';
+import { createReducer, on } from '@ngrx/store';
+import { IAccuracy } from 'src/app/store/interfaces/accuracy.interfaces';
 
-export const INIT_STATE = [];
+
+export const INIT_STATE: IAccuracy[] = [];
+
+export const accuracyReducer = createReducer(
+  INIT_STATE,
+  on(accuracyActions.addAccuracy, (s, a) => ([ ...s, a.payload ]))
+);
+
+
 
 // export const initialState = { amount: 0, sum: 1 };
 //

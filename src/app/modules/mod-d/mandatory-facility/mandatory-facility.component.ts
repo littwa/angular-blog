@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { addAccuracy } from '../../../store/accuracy/accuracy.actions';
 
 @Component({
   selector: 'app-mandatory-facility',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MandatoryFacilityComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  public handleAddAccuracy(): void {
+    const payload = {
+      id: Date.now(),
+      name: new Date().toISOString()
+    };
+    this.store.dispatch(addAccuracy({ payload }));
   }
-
 }

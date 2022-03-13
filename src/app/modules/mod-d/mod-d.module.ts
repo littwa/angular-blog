@@ -5,7 +5,8 @@ import { ModDRoutingModule } from './mod-d-routing.module';
 import { FluxArchitectureComponent } from './flux-architecture/flux-architecture.component';
 import { MandatoryFacilityComponent } from './mandatory-facility/mandatory-facility.component';
 import { ProperlyInfiltrationComponent } from './properly-infiltration/properly-infiltration.component';
-import { PosibilitySurviveComponent } from './posibility-survive/posibility-survive.component';
+import { PossibilitySurviveComponent } from './posibility-survive/possibility-survive.component';
+import { ApproximatelyRecognizeComponent } from './approximately-recognize/approximately-recognize.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PosibilitySurviveComponent } from './posibility-survive/posibility-surv
     FluxArchitectureComponent,
     MandatoryFacilityComponent,
     ProperlyInfiltrationComponent,
-    PosibilitySurviveComponent
+    PossibilitySurviveComponent,
+    ApproximatelyRecognizeComponent
   ],
   imports: [
     CommonModule,
