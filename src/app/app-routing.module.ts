@@ -22,27 +22,31 @@ const routes: Routes = [
       {
         path: 'post/:id', component: PostPageComponent
       },
-      { path: 'material', loadChildren: () => import('./table/table.module').then(m => m.TableModule) }
+      { path: 'material', loadChildren: () => import('./table/table.module').then(m => m.TableModule) },
+      {
+        path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+      },
+      {
+        path: 'city', loadChildren: () => import('./modules/mod-a/mod-a.module').then(m => m.ModAModule)
+      },
+      {
+        path: 'car', loadChildren: () => import('./modules/mod-b/mod-b.module').then(m => m.ModBModule),
+        resolve: {
+          superResolver: SuperResolver
+        }
+      },
+      {
+        path: 'chart', loadChildren: () => import('./modules/mod-c/mod-c.module').then(m => m.ModCModule)
+      },
+      {
+        path: 'flux', loadChildren: () => import('src/app/modules/mod-d/mod-d.module').then(m => m.ModDModule)
+      },
+      {
+        path: '**', redirectTo: '/', pathMatch: 'full'
+      }
     ]
   },
-  {
-    path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
-  },
-  {
-    path: 'city', loadChildren: () => import('./modules/mod-a/mod-a.module').then(m => m.ModAModule)
-  },
-  {
-    path: 'car', loadChildren: () => import('./modules/mod-b/mod-b.module').then(m => m.ModBModule),
-    resolve: {
-      superResolver: SuperResolver
-    }
-  },
-  {
-    path: 'chart', loadChildren: () => import('./modules/mod-c/mod-c.module').then(m => m.ModCModule)
-  },
-  {
-    path: '**', component: CatRouteComponent
-  }
+
 ];
 
 const config = { preloadingStrategy: PreloadAllModules };

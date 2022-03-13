@@ -1,10 +1,11 @@
 
 <nav class="navbar main">
-  <h3><a [ngStyle]="{color: '#000'}" [routerLink]="'/'">Home</a></h3><span>&nbsp;-&nbsp;</span>
-  <h3><a [ngStyle]="{color: '#000'}" [routerLink]="'/material'">Material</a></h3>
-  <h3><a [ngStyle]="{color: '#000'}" [routerLink]="'/city'">City</a></h3>
-  <h3><a [ngStyle]="{color: '#000'}" [routerLink]="'/car'">Car</a></h3>
-  <h3><a [ngStyle]="{color: '#000'}" [routerLink]="'/chart'">Chart</a></h3>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/'" [routerLinkActiveOptions]="{ exact: true }">Home</a></h4>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/material'">Material</a></h4>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/city'">City</a></h4>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/car'">Car</a></h4>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/chart'">Chart</a></h4>
+  <h4><a [routerLinkActive]="'active'" [class]="['link']" [routerLink]="'/flux'">Flux</a></h4>
 </nav>
 
 <div class="container"><router-outlet></router-outlet></div>

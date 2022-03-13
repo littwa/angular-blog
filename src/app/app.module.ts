@@ -16,8 +16,6 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './shared/auth.intreceptor';
-import { reducers } from './core/index';
-import { MainEffects } from './core/main/main.effects';
 import { C, CatRouteComponent } from './shared/components/cat-route/cat-route.component';
 import { DogRouteComponent } from './shared/components/dog-route/dog-route.component';
 
@@ -28,11 +26,9 @@ import { MatTableModule } from '@angular/material/table';
 import { NgCircleProgressModule, CircleProgressOptions } from 'ng-circle-progress';
 import { SimpleComponent } from './shared/components/simple/simple.component';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
-import { DiaryComponent } from './table/diary/diary.component';
 import { TableModule } from './table/table.module';
-import { ModARoutingModule } from 'src/app/modules/mod-a/mod-a-routing.module';
 import { ModAModule } from 'src/app/modules/mod-a/mod-a.module';
-import { CityComponent } from 'src/app/modules/mod-a/city/city.component';
+import { StoreApplicableModule } from './store/store-applicable.module';
 
 
 registerLocaleData(ruLocale, 'ru');
@@ -59,8 +55,9 @@ const INTERCEPTOR_PROVIDER = {
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    EffectsModule.forRoot([MainEffects]),
-    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(),
+    StoreModule.forRoot({}),
+    StoreApplicableModule,
     StoreDevtoolsModule.instrument(),
     BrowserAnimationsModule,
     MatSliderModule,
