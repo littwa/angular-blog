@@ -9,9 +9,12 @@ import { IAccuracy } from 'src/app/store/interfaces/accuracy.interfaces';
 export class ApproximatelyRecognizeComponent implements OnInit {
 
   @Input() data: IAccuracy;
+  @Input() add: any;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(100099, this.add);
+  }
 
 }

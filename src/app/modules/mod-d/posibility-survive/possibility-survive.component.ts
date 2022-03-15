@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { getAccuracySelector } from '../../../store/accuracy/accuracy.selectors';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-possibility-survive',
@@ -8,10 +10,12 @@ import { Store } from '@ngrx/store';
 })
 export class PossibilitySurviveComponent implements OnInit {
 
+  public items = this.store.select(getAccuracySelector) || of([]);
+
   constructor(private store: Store) { }
 
   ngOnInit(): void {
-    // this.store.select()
+    this.store.select(getAccuracySelector).subscribe(v => console.log(1000066, v));
   }
 
 }

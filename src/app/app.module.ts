@@ -29,6 +29,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { TableModule } from './table/table.module';
 import { ModAModule } from 'src/app/modules/mod-a/mod-a.module';
 import { StoreApplicableModule } from './store/store-applicable.module';
+import { accuracyReducer } from './store/accuracy/accuracy.reducers';
 
 
 registerLocaleData(ruLocale, 'ru');

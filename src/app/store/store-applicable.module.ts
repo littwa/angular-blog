@@ -9,7 +9,8 @@ import { accuracyReducer } from './accuracy/accuracy.reducers';
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forFeature('accuracy', accuracyReducer)
+    StoreModule.forFeature('accuracy', accuracyReducer),
+    // StoreModule.forFeature('evidence', evidenceReducer)
     // EffectsModule.forFeature()
   ]
 })
