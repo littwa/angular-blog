@@ -1,4 +1,8 @@
 <p>flux-architecture works!</p>
-<app-mandatory-facility>
+<app-mandatory-facility [tmplRef]="ref">
   <app-possibility-survive></app-possibility-survive>
 </app-mandatory-facility>
+
+<ng-template #ref let-element>
+  <div>{{ element }}</div>
+</ng-template>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentRef, Input, OnInit, TemplateRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { addAccuracy } from '../../../store/accuracy/accuracy.actions';
+import { ProperlyInfiltrationComponent } from '../properly-infiltration/properly-infiltration.component';
 
 @Component({
   selector: 'app-mandatory-facility',
@@ -8,6 +9,8 @@ import { addAccuracy } from '../../../store/accuracy/accuracy.actions';
   styleUrls: ['./mandatory-facility.component.scss']
 })
 export class MandatoryFacilityComponent implements OnInit {
+  public componentRef = ProperlyInfiltrationComponent;
+  @Input() tmplRef: TemplateRef<any>;
 
   constructor(private store: Store) { }
 

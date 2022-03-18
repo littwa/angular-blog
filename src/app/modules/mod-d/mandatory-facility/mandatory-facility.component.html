@@ -2,3 +2,7 @@
 <button (click)="handleAddAccuracy()">dispatch action addAccuracy</button>
 <p>mandatory-facility works!----</p>
 <ng-content></ng-content>
+
+<ng-container *ngTemplateOutlet="tmplRef; context: { $implicit: 'This context($implicit)' }" ></ng-container>
+
+<ng-container *ngComponentOutlet="componentRef"></ng-container>
