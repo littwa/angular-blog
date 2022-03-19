@@ -28,7 +28,10 @@ export class MandatoryFacilityComponent implements OnInit, AfterViewInit, AfterC
   @ViewChildren('element') element: QueryList<ElementRef>;
   @ViewChildren('template') template: QueryList<TemplateRef<any>>;
   @ContentChild(PossibilitySurviveComponent) contChildRef: PossibilitySurviveComponent;
-  @ContentChildren('conts') contentChildren;
+  @ContentChild('contChildDiv') contChildDiv: ElementRef;
+  @ContentChildren(PossibilitySurviveComponent) contentChildren: QueryList<any>;
+  @ContentChildren('contChildP') contChildP: QueryList<any>;
+  @ContentChildren('ngTemplate, ngTemplate2, ngTemplate3') ngTemplates: QueryList<TemplateRef<any>>;
 
   constructor(private store: Store) { }
 
@@ -41,8 +44,12 @@ export class MandatoryFacilityComponent implements OnInit, AfterViewInit, AfterC
   }
 
   ngAfterContentInit(): void {
-    console.log('@ContentChild()', this.contChildRef, this.contChildRef.testMethodContentChild());
-    console.log('@contentChildren()', this.contentChildren);
+    console.log('@ContentChild(contChildRef)--------', this.contChildRef, this.contChildRef.testMethodContentChild());
+    console.log('@contentChildren(contentChildren)--------', this.contentChildren);
+    console.log('@contentChild(contChildDiv)--------', this.contChildDiv);
+    console.log('@contentChildren(contChildP)--------', this.contChildP);
+    console.log('@contentChildren(ngTemplate)--------', this.ngTemplates);
+
   }
 
   public handleAddAccuracy(): void {

@@ -20,3 +20,8 @@
 <ng-container *ngTemplateOutlet="tmplRef; context: { $implicit: 'This context($implicit)' }" ></ng-container>
 
 <ng-container *ngComponentOutlet="componentRef"></ng-container>
+
+
+<ng-container *ngFor="let templateCH of ngTemplates; index as i">
+  <ng-container *ngTemplateOutlet="templateCH; context: {$implicit: i}"></ng-container>
+</ng-container>
