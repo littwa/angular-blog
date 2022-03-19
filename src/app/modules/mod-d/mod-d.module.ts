@@ -7,6 +7,7 @@ import { MandatoryFacilityComponent } from './mandatory-facility/mandatory-facil
 import { ProperlyInfiltrationComponent } from './properly-infiltration/properly-infiltration.component';
 import { PossibilitySurviveComponent } from './posibility-survive/possibility-survive.component';
 import { ApproximatelyRecognizeComponent } from './approximately-recognize/approximately-recognize.component';
+import { DueMenuComponent } from './due-menu/due-menu.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ApproximatelyRecognizeComponent } from './approximately-recognize/appro
     MandatoryFacilityComponent,
     ProperlyInfiltrationComponent,
     PossibilitySurviveComponent,
-    ApproximatelyRecognizeComponent
+    ApproximatelyRecognizeComponent,
+    DueMenuComponent
   ],
   imports: [
     CommonModule,

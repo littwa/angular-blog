@@ -1,6 +1,20 @@
-<p>mandatory-facility works!----</p>
+<div>mandatory-facility tag div</div>
 <button (click)="handleAddAccuracy()">dispatch action addAccuracy</button>
-<p>mandatory-facility works!----</p>
+<p #elementP>mandatory-facility tag p</p>
+
+<ng-template #template>
+  <span>xxx</span>
+  <span>ccc</span>
+</ng-template>
+<ng-template #template>
+  <span>mmm</span>
+  <span>nnn</span>
+</ng-template>
+
+<span #element>ttt</span>
+<span #element>bbb</span>
+<span #element>ggg</span>
+
 <ng-content></ng-content>
 
 <ng-container *ngTemplateOutlet="tmplRef; context: { $implicit: 'This context($implicit)' }" ></ng-container>

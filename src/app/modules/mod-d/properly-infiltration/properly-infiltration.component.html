@@ -1,1 +1,11 @@
-<p>properly-infiltration works!</p>
+<div #refDiv>properly-infiltration works!</div>
+
+
+<div>
+  <button (click)="menu.show()">
+    Open menu
+  </button>
+  <app-due-menu #menu>
+    <p>From App Component 1</p>
+  </app-due-menu>
+</div>

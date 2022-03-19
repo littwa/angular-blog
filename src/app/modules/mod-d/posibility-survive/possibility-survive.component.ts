@@ -11,11 +11,17 @@ import { of } from 'rxjs';
 export class PossibilitySurviveComponent implements OnInit {
 
   public items = this.store.select(getAccuracySelector) || of([]);
+  public val = 777;
 
   constructor(private store: Store) { }
 
   ngOnInit(): void {
     this.store.select(getAccuracySelector).subscribe(v => console.log(1000066, v));
+  }
+
+  testMethodContentChild(): any {
+    console.log('testMethodContentChild Work');
+    return this.val;
   }
 
 }
