@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { getAccuracySelector } from '../../../store/accuracy/accuracy.selectors';
 import { of } from 'rxjs';
@@ -32,6 +32,8 @@ export class PossibilitySurviveComponent implements OnInit {
   state2 = 'x';
   hide = true;
   list = [1, 2, 3];
+  // @HostBinding('@chartShowHide') chartShowHide;
+
   constructor(private store: Store) { }
 
   ngOnInit(): void {

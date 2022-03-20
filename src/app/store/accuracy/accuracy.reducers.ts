@@ -1,13 +1,15 @@
 import * as accuracyActions from './accuracy.actions';
 import { createReducer, on } from '@ngrx/store';
 import { IAccuracy } from 'src/app/store/interfaces/accuracy.interfaces';
+import { delAccuracy } from './accuracy.actions';
 
 
 export const INIT_STATE: IAccuracy[] = [];
 
 export const accuracyReducer = createReducer(
   INIT_STATE,
-  on(accuracyActions.addAccuracy, (s, a) => ([ ...s, a.payload ]))
+  on(accuracyActions.addAccuracy, (s, a) => ([ ...s, a.payload ])),
+  on(accuracyActions.delAccuracy, (s, a) => ([ ...s ].filter(v => v.id !== a.payload)))
 );
 
 

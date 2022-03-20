@@ -1,13 +1,11 @@
-<p>posibility-survive works!</p>
-
-<!--<app-approximately-recognize *ngFor="let data of $any(items | async)" [data]="data"></app-approximately-recognize>-->
 <div>
 <app-approximately-recognize
   *ngFor="let data of $any(items | async) as arr; index as i"
   [add]="[arr, i]"
   [data]="data"
-  [@chartShowHide]
+
 ></app-approximately-recognize>
+<!--  [@chartShowHide]-->
 </div>
 
   <button (click)="expand()">trigger anime</button>
