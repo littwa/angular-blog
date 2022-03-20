@@ -1,5 +1,24 @@
 <p>posibility-survive works!</p>
 
 <!--<app-approximately-recognize *ngFor="let data of $any(items | async)" [data]="data"></app-approximately-recognize>-->
+<div>
+<app-approximately-recognize
+  *ngFor="let data of $any(items | async) as arr; index as i"
+  [add]="[arr, i]"
+  [data]="data"
+  [@chartShowHide]
+></app-approximately-recognize>
+</div>
 
-<app-approximately-recognize *ngFor="let data of $any(items | async) as arr; index as i" [add]="[arr, i]" [data]="data"></app-approximately-recognize>
+  <button (click)="expand()">trigger anime</button>
+  <div [@expandedPanel]="state">Anime</div>
+
+<button (click)="hide = !hide">trigger hide</button>
+<!--chartShowHide -------- exp-->
+<div class="hide" *ngIf="hide" [@exp]>hide+
+  <div>Hide</div>
+</div>
+
+<button (click)="list.push(list.length + 1)">List add</button><span>|</span>
+<button (click)="list.pop()">List del</button>
+<div [@chartShowHide] class="item" *ngFor="let x of list">{{x}}</div>
