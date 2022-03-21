@@ -18,8 +18,8 @@ import { chartAnimation } from '../../../animations/chart.animation';
       transition('initial <=> expanded', animate('0.2s')),
     ]),
     trigger('exp', [
-      transition('void => *', [animate('1.1s'), style({opacity: 0})]),
-      transition('* => void', [ animate('1.1s'), style({opacity: 1}) ]),
+      transition('void => *', [style({opacity: 0}), animate('1.1s'), style({opacity: 1})]),
+      transition('* => void', [ animate('1.1s'), style({opacity: 0}) ]),
     ])
   ],
 })
@@ -29,7 +29,6 @@ export class PossibilitySurviveComponent implements OnInit {
   public val = 777;
   isExpanded = false;
   state = 'initial';
-  state2 = 'x';
   hide = true;
   list = [1, 2, 3];
   // @HostBinding('@chartShowHide') chartShowHide;

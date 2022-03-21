@@ -1,22 +1,19 @@
-<div>
 <app-approximately-recognize
   *ngFor="let data of $any(items | async) as arr; index as i"
   [add]="[arr, i]"
   [data]="data"
 
 ></app-approximately-recognize>
-<!--  [@chartShowHide]-->
-</div>
+<br>
+<button (click)="expand()">trigger anime</button>
+<div [@expandedPanel]="state">Anime</div>
 
-  <button (click)="expand()">trigger anime</button>
-  <div [@expandedPanel]="state">Anime</div>
-
-<button (click)="hide = !hide">trigger hide</button>
-<!--chartShowHide -------- exp-->
-<div class="hide" *ngIf="hide" [@exp]>hide+
-  <div>Hide</div>
+<button class="btn1" (click)="hide = !hide">trigger hide</button>
+<div class="hide" *ngIf="hide" [@exp]>
+  <div>exp animation</div>
 </div>
 
 <button (click)="list.push(list.length + 1)">List add</button><span>|</span>
 <button (click)="list.pop()">List del</button>
 <div [@chartShowHide] class="item" *ngFor="let x of list">{{x}}</div>
+<hr>
