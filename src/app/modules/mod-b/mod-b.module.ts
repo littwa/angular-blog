@@ -6,6 +6,7 @@ import { KiaComponent } from './kia/kia.component';
 import { BmvComponent } from './bmv/bmv.component';
 import { SkodaComponent } from './skoda/skoda.component';
 import { AdDirective } from 'src/app/directives/ad.directive';
+import { FordAccompanyComponent } from './ford-accompany/ford-accompany.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AdDirective } from 'src/app/directives/ad.directive';
     KiaComponent,
     BmvComponent,
     SkodaComponent,
-    AdDirective
+    AdDirective,
+    FordAccompanyComponent
   ],
   imports: [
     CommonModule,

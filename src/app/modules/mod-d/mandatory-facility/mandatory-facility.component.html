@@ -1,5 +1,15 @@
-<div>mandatory-facility tag div</div>
+<div>-------------FLUX-------------</div>
 <button (click)="handleAddAccuracy()">dispatch action addAccuracy</button>
+
+<ng-content></ng-content>
+
+<ng-container *ngTemplateOutlet="tmplRef; context: { $implicit: 'This context($implicit)' }" ></ng-container>
+
+<ng-container *ngComponentOutlet="componentRef"></ng-container>
+
+<ng-container *ngFor="let templateCH of ngTemplates; index as i">
+  <ng-container *ngTemplateOutlet="templateCH; context: {$implicit: i}"></ng-container>
+</ng-container>
 <p #elementP>mandatory-facility tag p</p>
 
 <ng-template #template>
@@ -14,13 +24,3 @@
 <span #element>ttt</span>
 <span #element>bbb</span>
 <span #element>ggg</span>
-
-<ng-content></ng-content>
-
-<ng-container *ngTemplateOutlet="tmplRef; context: { $implicit: 'This context($implicit)' }" ></ng-container>
-
-<ng-container *ngComponentOutlet="componentRef"></ng-container>
-
-<ng-container *ngFor="let templateCH of ngTemplates; index as i">
-  <ng-container *ngTemplateOutlet="templateCH; context: {$implicit: i}"></ng-container>
-</ng-container>
