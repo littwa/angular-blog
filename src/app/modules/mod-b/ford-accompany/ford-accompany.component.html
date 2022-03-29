@@ -1,3 +1,14 @@
-<p class="test-rxjs" #ref>rxjs test</p>
+<p class="test-rxjs" #ref>rxjs test click</p>
+<p class="test-rxjs" (click)="handleClickSub($event)">rxjs next() Subject</p>
+<p class="test-rxjs" (click)="handleClickBehaviorSub($event)">rxjs next() BehaviorSubject</p>
+<p class="test-rxjs" (click)="handleClickReplaySub($event)">rxjs next() ReplaySubject</p>
+<p class="test-rxjs" (click)="handleClickAsyncSub($event)">rxjs next() AsyncSubject</p>
+<p class="test-rxjs" (click)="handleClickSubjectExp($event)">rxjs next() SubjectExp</p>
+<p class="test-rxjs" (click)="handleClickSubjectMapExternal($event)">rxjs next() subjectMapExternal$</p>
+<p class="test-rxjs" (click)="handleClickSubjectMapInternal($event)">rxjs next() subjectMapInternal$</p>
 
 <button (click)="handleClick($event)">Button</button>
+<button (click)="handleClick2($event)">Button2</button>
+<button (click)="handleClick3($event)">Button3</button>
+<button (click)="handleClick4($event)">Button4</button>
+<button (click)="handleClick5($event)">Button5</button>

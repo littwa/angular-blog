@@ -1,0 +1,8 @@
+<p>accidentally-collide works!</p>
+<button (click)="getAllEvidenceRequest()">GetAllEvidenceRequest</button>
+<app-divide-exceptions>
+  <app-particular-clarification></app-particular-clarification>
+</app-divide-exceptions>
+<div class="wrapper-prohibited">
+<app-prohibited-strength *ngFor="let item of evidences$ | async" [data]="item"></app-prohibited-strength>
+</div>

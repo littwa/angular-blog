@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Bob",
+    "age": 25,
+    "active": true,
+    "address": {
+      "index": 100235,
+      "country":"Poland",
+      "city": "Krakow"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Dan",
+    "age": 29,
+    "active": false,
+    "address": {
+      "index": 100443,
+      "country":"USA",
+      "city": "Florida"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Cat",
+    "age": 35,
+    "active": true,
+    "address": {
+      "index": 100111,
+      "country":"Ukraine",
+      "city": "Kyiv"
+    }
+  }
+]

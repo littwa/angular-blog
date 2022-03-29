@@ -30,6 +30,7 @@ import { TableModule } from './table/table.module';
 import { ModAModule } from 'src/app/modules/mod-a/mod-a.module';
 import { StoreApplicableModule } from './store/store-applicable.module';
 import { accuracyReducer } from './store/accuracy/accuracy.reducers';
+import { EvidenceEffects } from './store/evidence/evidence.effects';
 
 
 registerLocaleData(ruLocale, 'ru');
@@ -53,13 +54,13 @@ const INTERCEPTOR_PROVIDER = {
     SimpleComponent,
   ],
   imports: [
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot(),
+    StoreApplicableModule,
+    StoreDevtoolsModule.instrument(),
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    EffectsModule.forRoot(),
-    StoreModule.forRoot({}),
-    StoreApplicableModule,
-    StoreDevtoolsModule.instrument(),
     BrowserAnimationsModule,
     MatSliderModule,
     MatDialogModule,
@@ -67,7 +68,7 @@ const INTERCEPTOR_PROVIDER = {
     NgCircleProgressModule,
     PickerModule,
     TableModule,
-    ModAModule
+    ModAModule,
   ],
   providers: [INTERCEPTOR_PROVIDER, CircleProgressOptions],
   bootstrap: [AppComponent]

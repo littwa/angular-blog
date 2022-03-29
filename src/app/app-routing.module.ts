@@ -42,6 +42,9 @@ const routes: Routes = [
         path: 'flux', loadChildren: () => import('src/app/modules/mod-d/mod-d.module').then(m => m.ModDModule)
       },
       {
+        path: 'ngrx', loadChildren: () => import('src/app/modules/mod-e/mod-e.module').then(m => m.ModEModule)
+      },
+      {
         path: '**', redirectTo: '/', pathMatch: 'full'
       }
     ]
