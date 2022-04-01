@@ -29,6 +29,6 @@ export const evidenceEditRequest = createAction(EVIDENCE_EDIT_REQUEST, props<{ p
 export const evidenceEditSuccess = createAction(EVIDENCE_EDIT_SUCCESS, props<{ payload: IEvidence }>());
 export const evidenceEditError = createAction(EVIDENCE_EDIT_ERROR, props<{ err: any }>());
 
-export const evidenceDelRequest = createAction(EVIDENCE_DEL_REQUEST, props<{ id: number }>());
-export const evidenceDelSuccess = createAction(EVIDENCE_DEL_SUCCESS, props<{ id: number }>());
+export const evidenceDelRequest = createAction(EVIDENCE_DEL_REQUEST, props<{ id: any }>());
+export const evidenceDelSuccess = createAction(EVIDENCE_DEL_SUCCESS, props<{ id: any }>());
 export const evidenceDelError = createAction(EVIDENCE_DEL_ERROR, props<{ err: any }>());
