@@ -29,7 +29,7 @@ export class CatRouteComponent implements OnInit {
     source.pipe(
       concatMap(val => of(`Delayed by: ${val}ms`).pipe(delay(val)))
     ).subscribe(val => console.log(`With concatMap: ${val}`));
-    //output: With concatMap: Delayed by: 2000ms, With concatMap: Delayed by: 1000ms
+    // output: With concatMap: Delayed by: 2000ms, With concatMap: Delayed by: 1000ms
     // example
 
     // showing the difference between concatMap and mergeMap

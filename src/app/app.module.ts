@@ -31,6 +31,7 @@ import { ModAModule } from 'src/app/modules/mod-a/mod-a.module';
 import { StoreApplicableModule } from './store/store-applicable.module';
 import { accuracyReducer } from './store/accuracy/accuracy.reducers';
 import { EvidenceEffects } from './store/evidence/evidence.effects';
+import { metaReducers } from './store';
 
 
 registerLocaleData(ruLocale, 'ru');
@@ -54,7 +55,7 @@ const INTERCEPTOR_PROVIDER = {
     SimpleComponent,
   ],
   imports: [
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({}, { metaReducers }),
     EffectsModule.forRoot(),
     StoreApplicableModule,
     StoreDevtoolsModule.instrument(),
